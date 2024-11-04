@@ -1,101 +1,146 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Circle } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+      <nav className="container flex items-center justify-between px-32 py-5 min-w-full">
+        <div className="font-bold text-3xl">
+          Logo
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex items-center">
+          <ul className="flex gap-9 font-light">
+            <li>Home</li>
+            <li>Features</li>
+            <li>Community</li>
+            <li>Blog</li>
+            <li>Pricing</li>
+          </ul>
+          <Button className="ml-4">
+            Register Now
+            <ArrowRight size={20} />
+          </Button>
+        </div>
+      </nav>
+      <section className="container pt-20 bg-[#F5F7FA] flex flex-col justify-center max-w-full max-h-screen">
+        <div className="grid grid-cols-2 items-center">
+          <div className="flex flex-col items-start pl-40">
+            <h1 className="text-7xl text-left font-bold mb-10">Lessons and insights
+              <br />
+              <span className="text-primary">
+                from 8 years
+              </span>
+            </h1>
+            <p>Where to grow your bussiness as a photographer: site or social media?</p>
+            <Button className="mt-5">
+              Register
+            </Button>
+          </div>
+          <div className="relative h-[500px] w-[500px] mx-auto">
+            <Image src={'/Illustration.png'} alt="computer" fill />
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-3 pb-5">
+          <Circle size={20} fill="green" color="green" />
+          <Circle size={20} />
+          <Circle size={20} />
+        </div>
+      </section>
+      <section className="container mx-auto flex flex-col gap-4 items-center mt-6 pt-7">
+        <h1 className="text-5xl font-semibold">Our Clients</h1>
+        <p className="mb-10">We have been working with some Fortune 500+ clients</p>
+        <div className="flex flex-row justify-between items-center gap-40">
+          <Image src={'/icons/Logo.png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(1).png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(2).png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(3).png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(4).png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(5).png'} width={50} height={50} alt="logo" />
+          <Image src={'/icons/Logo(6).png'} width={50} height={50} alt="logo" />
+        </div>
+      </section>
+      <section className="container mx-auto flex flex-col gap-4 items-center mt-6 pt-7">
+        <h1 className="text-5xl font-semibold text-center">Manage your entire community
+          <br />
+          in a single system</h1>
+        <p className="mb-10">Who is Nextcent suitable for?
+        </p>
+        <div className="flex flex-row justify-center items-center gap-40">
+          <div className="flex flex-col items-center justify-center">
+            <Image src={'/icons/Icon.png'} width={70} height={70} alt="logo" />
+            <h1 className="text-2xl font-semibold mt-3 text-center">Membership Organisations</h1>
+            <p className="text-center mt-2">Our membership management software provides full automation of membership renewals and payments</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <Image src={'/icons/Icon(1).png'} width={70} height={70} alt="logo" />
+            <h1 className="text-2xl font-semibold mt-3 text-center">Membership Organisations</h1>
+            <p className="text-center mt-2">Our membership management software provides full automation of membership renewals and payments</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <Image src={'/icons/Icon(2).png'} width={70} height={70} alt="logo" />
+            <h1 className="text-2xl font-semibold mt-3 text-center">Membership Organisations</h1>
+            <p className="text-center mt-2">Our membership management software provides full automation of membership renewals and payments</p>
+          </div>
+        </div>
+      </section>
+      <section className="container flex items-center justify-center mx-auto max-w-6xl">
+        <Image src={'/icons/Frame35.png'} height={500} width={500} alt="people" />
+        <div className="flex flex-col items-start">
+          <h1 className="text-4xl font-semibold">The unseen of spending three years at Pixelgrade</h1>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
+          </p>
+          <Button className="mt-7">
+            Learn More
+          </Button>
+        </div>
+      </section>
+      <section className="container mx-auto bg-[#F5F7FA] max-w-full p-16">
+        <div  className="flex items-center justify-between max-w-5xl mx-auto">
+        <div className="flex flex-col gap-5">
+          <h1 className="text-5xl font-semibold">Helping a local 
+            <br />
+            <span className="text-primary">
+            business reinvent itself
+
+            </span>
+            </h1>
+          <p>We reached here with our hard work and dedication</p>
+        </div>
+        <div className="grid grid-cols-2 gap-10">
+          <div className="flex gap-5">
+            <Image src={'/icons/Vector.png'} alt="vector" height={80} width={80} />
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-semibold">2,245,341</h1>
+              <p>Members</p>
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <Image src={'/icons/Vector(1).png'} alt="vector" height={80} width={80} />
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-semibold">2,245,341</h1>
+              <p>Members</p>
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <Image src={'/icons/Icon(3).png'} alt="vector" height={80} width={80} />
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-semibold">2,245,341</h1>
+              <p>Members</p>
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <Image src={'/icons/Icon(4).png'} alt="vector" height={80} width={80} />
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-semibold">2,245,341</h1>
+              <p>Members</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      
+    </main>
   );
 }
