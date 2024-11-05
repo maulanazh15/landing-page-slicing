@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Circle, Facebook, FacebookIcon, Instagram, InstagramIcon, Send, Twitter, Youtube, YoutubeIcon } from "lucide-react";
+import { ArrowRight, Circle, Facebook, Instagram, Send, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+  CardContent, CardHeader,
+  CardTitle
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
 
 export default function Home() {
@@ -243,7 +239,7 @@ export default function Home() {
         <div className="max-w-3xl flex flex-col gap-3">
           <h1 className="text-5xl font-semibold text-center">Caring is the new marketing
           </h1>
-          <p className="mb-10 text-center">The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.
+          <p className="mb-10 text-center">The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who&apos;s joining the community, read about how our community are increasing their membership income and lot&apos;s more.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 max-w-full sm:gap-40 min-h-max">
